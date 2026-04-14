@@ -30,7 +30,7 @@
 
         .page {
             width: 21cm;
-            height: 29.7cm; /* Hauteur fixe pour le format A4 */
+            height: 29.7cm;
             background: var(--bg-paper);
             margin: 20px auto;
             display: grid;
@@ -89,7 +89,7 @@
             margin-bottom: 20px;
             font-style: italic;
             font-size: 0.85rem;
-            min-height: 65px; 
+            min-height: 70px;
             display: flex;
             align-items: center;
         }
@@ -101,23 +101,23 @@
             border-bottom: 2px solid var(--accent-main);
             padding-bottom: 4px;
             margin-bottom: 15px;
+            margin-top: 5px;
         }
 
         .experience-item { margin-bottom: 18px; }
         .job-header { display: flex; justify-content: space-between; align-items: baseline; }
         .job-title { font-weight: 700; font-size: 0.95rem; }
         .job-company { font-weight: 500; font-size: 0.9rem; color: var(--accent-main); }
-        .job-date { font-size: 0.75rem; color: var(--text-light); }
+        .job-date { font-size: 0.75rem; color: var(--text-light); white-space: nowrap; margin-left: 10px; }
 
         .job-desc { list-style: none; color: var(--text-light); font-size: 0.85rem; margin-top: 5px; }
         .job-desc li { padding-left: 15px; position: relative; margin-bottom: 2px; }
         .job-desc li::before { content: "▹"; position: absolute; left: 0; color: var(--primary-color); }
 
-        /* LOGIQUE DE LANGUE AMÉLIORÉE */
         .en-only { display: none !important; }
         [lang="en"] .fr-only { display: none !important; }
         [lang="en"] .en-only { display: block !important; }
-        [lang="en"] span.en-only, [lang="en"] strong.en-only { display: inline !important; }
+        [lang="en"] span.en-only, [lang="en"] strong.en-only, [lang="en"] i.en-only { display: inline !important; }
 
         .lang-toggle {
             position: fixed; top: 20px; right: 20px;
@@ -152,7 +152,7 @@
             <ul class="skills-list">
                 <li><strong>Web Front:</strong> React, Vue.js, HTML, CSS</li>
                 <li><strong>Back-End:</strong> PHP, Laravel, Java, C#, SQL</li>
-                <li><strong><span class="fr-only">Outils:</span><span class="en-only">Tools:</span></strong> JIRA, Git, Google Workspace</li>
+                <li><strong><span class="fr-only">Outils:</span><span class="en-only">Tools:</span></strong> JIRA, Confluence, Google Workspace, Git</li>
                 <li><strong><span class="fr-only">Créatif:</span><span class="en-only">Creative:</span></strong> Ps, Ai, Pr, Ae</li>
             </ul>
 
@@ -170,6 +170,13 @@
                 <li style="min-height: 30px;"><span class="fr-only">Anglais (Courant)</span><span class="en-only">English (Fluent)</span></li>
                 <li style="min-height: 30px;"><span class="fr-only">Allemand (Intermédiaire)</span><span class="en-only">German (Intermediate)</span></li>
             </ul>
+
+            <h3 class="section-title-side"><span class="fr-only">Intérêts</span><span class="en-only">Interests</span></h3>
+            <ul class="skills-list">
+                <li style="min-height: 30px;"><span class="fr-only">Rugby / Escalade</span><span class="en-only">Rugby / Climbing</span></li>
+                <li style="min-height: 30px;"><span class="fr-only">Jeux Vidéo / Tech</span><span class="en-only">Video Games / Tech</span></li>
+                <li style="min-height: 30px;"><span class="fr-only">Danse tahitienne</span><span class="en-only">Tahitian Dance</span></li>
+            </ul>
         </aside>
 
         <main class="main-content">
@@ -180,8 +187,8 @@
                     <span class="en-only">Team Lead OPS & Developer</span>
                 </h2>
                 <div class="profile-summary">
-                    <p class="fr-only">Professionnel passionné par la technologie et la gestion opérationnelle. Fort d'une double compétence en développement web et support technique, je me spécialise dans la coordination d'équipes.</p>
-                    <p class="en-only">Passionate professional with expertise in technology and operational management. With a dual background in web development and technical support, I specialize in team coordination.</p>
+                    <p class="fr-only">Professionnel passionné par la technologie et la gestion opérationnelle. Fort d'une double compétence en développement web et support technique, je me spécialise aujourd'hui dans la coordination d'équipes et l'optimisation des processus.</p>
+                    <p class="en-only">Passionate professional with expertise in technology and operational management. With a dual background in web development and technical support, I now specialize in team coordination and process optimization.</p>
                 </div>
             </header>
 
@@ -193,21 +200,60 @@
                         <div class="job-title">Team Lead OPS</div>
                         <div class="job-company">Solutions Médias 360, Montréal</div>
                     </div>
-                    <div class="job-date"><span class="fr-only">Déc 2024 – Présent</span><span class="en-only">Dec 2024 – Present</span></div>
+                    <div class="job-date"><span class="fr-only">Déc 2024 – Mars 2026</span><span class="en-only">Dec 2024 – March 2026</span></div>
                 </div>
                 <ul class="job-desc">
-                    <li><span class="fr-only">Supervision de l'équipe et gestion des priorités.</span><span class="en-only">Team supervision and priority management.</span></li>
-                    <li><span class="fr-only">Point de contact pour les escalades techniques.</span><span class="en-only">Main point of contact for technical escalations.</span></li>
+                    <li><i class="fr-only">(Remplacement de déc. 2024 à avril 2025, titularisé depuis mai 2025)</i><i class="en-only">(Acting role from Dec 2024 to April 2025, Full-time since May 2025)</i></li>
+                    <li><span class="fr-only">Supervision de l'équipe des opérations, gestion des plannings et priorités.</span><span class="en-only">Supervision of the operations team, management of schedules and priorities.</span></li>
+                    <li><span class="fr-only">Point de contact principal pour les escalades techniques (Niveau 2/3).</span><span class="en-only">Main point of contact for technical escalations (Tier 2/3).</span></li>
+                    <li><span class="fr-only">Formation continue et coaching des nouveaux techniciens.</span><span class="en-only">Continuous training and coaching of new technicians.</span></li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title"><span class="fr-only">Technicien Support Ops</span><span class="en-only">Ops Support Technician</span></div>
+                        <div class="job-company">Solutions Médias 360, Montréal</div>
+                    </div>
+                    <div class="job-date"><span class="fr-only">Fév 2022 – Déc 2024</span><span class="en-only">Feb 2022 – Dec 2024</span></div>
+                </div>
+                <ul class="job-desc">
+                    <li><span class="fr-only">Support technique et gestion d'inventaire.</span><span class="en-only">Technical support and inventory management.</span></li>
+                    <li><span class="fr-only">Installation et configuration de services (sites web, outils internes).</span><span class="en-only">Installation and configuration of services (websites, internal tools).</span></li>
+                    <li><span class="fr-only">Gestion des DNS et des résiliations de services.</span><span class="en-only">DNS management and service terminations.</span></li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title"><span class="fr-only">Développeur Front-End</span><span class="en-only">Front-End Developer</span></div>
+                        <div class="job-company"><span class="fr-only">JurisConcept, Québec</span><span class="en-only">JurisConcept, Quebec</span></div>
+                    </div>
+                    <div class="job-date"><span class="fr-only">Juil 2021 – Fév 2022</span><span class="en-only">Jul 2021 – Feb 2022</span></div>
+                </div>
+                <ul class="job-desc">
+                    <li><span class="fr-only">Développement d'UI pour logiciel interne et maintenance en React.js.</span><span class="en-only">Development of UI for internal software and maintenance using React.js.</span></li>
                 </ul>
             </div>
 
             <h3 class="section-title-main"><span class="fr-only">Formation</span><span class="en-only">Education</span></h3>
+
             <div class="experience-item">
                 <div class="job-header">
-                    <div class="job-title"><span class="fr-only">Technique d'intégration multimédia</span><span class="en-only">Multimedia Integration Degree</span></div>
+                    <div class="job-title"><span class="fr-only">Technique d'intégration multimédia</span><span class="en-only">Multimedia Integration Technique</span></div>
                     <div class="job-date">2018 – 2021</div>
                 </div>
                 <div class="job-company">Cégep de Matane, Québec</div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title"><span class="fr-only">BTS Services informatiques (SIO)</span><span class="en-only">HND in Computer Services (BTS SIO)</span></div>
+                    <div class="job-date">2016 – 2018</div>
+                </div>
+                <div class="job-company"><span class="fr-only">Lycée Bellepierre, Réunion</span><span class="en-only">Lycée Bellepierre, Reunion Island</span></div>
             </div>
         </main>
     </div>
