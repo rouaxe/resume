@@ -99,6 +99,7 @@
         .profile-summary {
             color: var(--text-light); margin-bottom: 25px;
             font-style: italic; font-size: 0.9rem; text-align: left;
+            hyphens: auto; /* Aide à l'équilibre visuel */
         }
 
         h3.section-title-main {
@@ -133,9 +134,14 @@
         }
 
         .en-only { display: none !important; }
+        
         [lang="en"] .fr-only { display: none !important; }
-        [lang="en"] .en-only { display: block !important; }
-        [lang="en"] span.en-only { display: inline !important; }
+        [lang="en"] .en-only { display: inherit !important; }
+        
+        [lang="en"] p.en-only, 
+        [lang="en"] ul.en-only, 
+        [lang="en"] div.en-only { display: block !important; }
+        /* ---------------------------------- */
 
         .lang-toggle {
             position: fixed; top: 20px; right: 20px;
@@ -211,19 +217,25 @@
             </h3>
             <ul class="skills-list">
                 <li>
-                    <strong class="fr-only">Web Front:</strong><strong class="en-only">Web Front:</strong> 
+                    <strong>Web Front:</strong> 
                     React, Vue.js, HTML, CSS
                 </li>
                 <li>
-                    <strong class="fr-only">Back-End:</strong><strong class="en-only">Back-End:</strong> 
+                    <strong>Back-End:</strong> 
                     PHP, Laravel, Java, C#, SQL
                 </li>
                 <li>
-                    <strong class="fr-only">Outils:</strong><strong class="en-only">Tools:</strong> 
+                    <strong>
+                        <span class="fr-only">Outils:</span>
+                        <span class="en-only">Tools:</span>
+                    </strong> 
                     JIRA, Confluence, Google Workspace, Git
                 </li>
                 <li>
-                    <strong class="fr-only">Créatif:</strong><strong class="en-only">Creative:</strong> 
+                    <strong>
+                        <span class="fr-only">Créatif:</span>
+                        <span class="en-only">Creative:</span>
+                    </strong> 
                     Ps, Ai, Pr, Ae
                 </li>
             </ul>
@@ -233,10 +245,10 @@
                 <span class="en-only">Soft Skills</span>
             </h3>
             <ul class="skills-list">
-                <li><span class="fr-only">• Leadership</span><span class="en-only">• Leadership</span></li>
-                <li><span class="fr-only">• Résolution de problèmes</span><span class="en-only">• Problem Solving</span></li>
-                <li><span class="fr-only">• Dynamique & Déterminé</span><span class="en-only">• Dynamic & Determined</span></li>
-                <li><span class="fr-only">• Sens du service</span><span class="en-only">• Customer Oriented</span></li>
+                <li>• <span class="fr-only">Leadership</span><span class="en-only">Leadership</span></li>
+                <li>• <span class="fr-only">Résolution de problèmes</span><span class="en-only">Problem Solving</span></li>
+                <li>• <span class="fr-only">Dynamique & Déterminé</span><span class="en-only">Dynamic & Determined</span></li>
+                <li>• <span class="fr-only">Sens du service</span><span class="en-only">Customer Oriented</span></li>
             </ul>
 
             <h3 class="section-title-side">
