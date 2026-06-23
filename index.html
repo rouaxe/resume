@@ -26,7 +26,7 @@
             font-family: 'Roboto', sans-serif;
             background: var(--bg-body);
             color: var(--text-dark);
-            line-height: 1.4;
+            line-height: 1.35;
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
         }
@@ -37,67 +37,70 @@
             background: var(--bg-paper);
             margin: 20px auto;
             display: grid;
-            grid-template-columns: 32% 68%;
+            grid-template-columns: 30% 70%;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
         }
 
         .sidebar {
             background-color: var(--primary-color) !important;
             color: var(--white);
-            padding: 25px 20px;
+            padding: 20px 15px;
         }
 
-        .logo-container { text-align: center; margin-bottom: 20px; }
+        .logo-container { text-align: center; margin-bottom: 15px; }
         .logo-container img {
-            max-width: 90px;
+            max-width: 80px;
             background: var(--bg-paper);
             border-radius: 50%; padding: 4px;
         }
 
-        .contact-info { margin-bottom: 25px; font-size: 0.85rem; font-style: normal; }
-        .contact-item { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-        .contact-text { font-size: 0.8rem; word-break: break-all; }
+        .contact-info { margin-bottom: 20px; font-size: 0.8rem; font-style: normal; }
+        .contact-item { margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .contact-text { font-size: 0.75rem; word-break: break-all; }
 
         h3.section-title-side {
             color: var(--white) !important;
             font-weight: 700; text-transform: uppercase;
             border-bottom: 2px solid var(--accent-sidebar) !important;
-            padding-bottom: 4px; margin-bottom: 12px; margin-top: 25px;
-            font-size: 0.95rem; letter-spacing: 0.5px;
+            padding-bottom: 2px; margin-bottom: 8px; margin-top: 18px;
+            font-size: 0.85rem; letter-spacing: 0.5px;
         }
 
-        .skills-list { list-style: none; font-size: 0.85rem; }
+        .skills-list { list-style: none; font-size: 0.78rem; }
         .skills-list li {
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             background: rgba(255,255,255,0.1) !important;
-            padding: 6px 10px; border-radius: 4px;
+            padding: 4px 8px; border-radius: 4px;
         }
 
-        .main-content { padding: 30px 35px; background: var(--bg-paper); }
+        .main-content { padding: 25px 30px; background: var(--bg-paper); }
 
-        .header-name h1 { font-size: 2.2rem; color: var(--primary-color); text-transform: uppercase; line-height: 1.1; }
-        .header-name h2 { font-size: 1.1rem; color: var(--accent-main); margin-bottom: 15px; font-weight: 500; }
+        .header-name h1 { font-size: 2rem; color: var(--primary-color); text-transform: uppercase; line-height: 1.1; }
+        .header-name h2 { font-size: 1.05rem; color: var(--accent-main); margin-bottom: 10px; font-weight: 500; }
 
         .profile-summary {
-            color: var(--text-light); margin-bottom: 25px;
-            font-style: italic; font-size: 0.85rem;
+            color: var(--text-light); margin-bottom: 15px;
+            font-style: italic; font-size: 0.8rem;
         }
 
         h3.section-title-main {
-            font-size: 1.1rem; color: var(--primary-color);
+            font-size: 1rem; color: var(--primary-color);
             text-transform: uppercase; border-bottom: 2px solid var(--accent-main);
-            padding-bottom: 4px; margin-bottom: 15px; margin-top: 15px;
+            padding-bottom: 2px; margin-bottom: 10px; margin-top: 12px;
         }
 
-        .experience-item { margin-bottom: 20px; }
+        .experience-item { margin-bottom: 12px; }
         .job-header { display: flex; justify-content: space-between; align-items: baseline; }
-        .job-title { font-weight: 700; font-size: 0.95rem; color: var(--text-dark); }
-        .job-company { font-weight: 500; font-size: 0.9rem; color: var(--accent-main); }
-        .job-date { font-size: 0.8rem; color: var(--text-light); text-align: right; }
+        .job-title { font-weight: 700; font-size: 0.88rem; color: var(--text-dark); }
+        .job-company { font-weight: 500; font-size: 0.82rem; color: var(--accent-main); }
+        .job-date { font-size: 0.78rem; color: var(--text-light); text-align: right; white-space: nowrap; }
 
-        .job-desc { list-style: none; color: var(--text-light); font-size: 0.85rem; margin-top: 5px; }
-        .job-desc li { margin-bottom: 3px; padding-left: 15px; position: relative; }
+        .job-desc { list-style: none; color: var(--text-light); font-size: 0.78rem; margin-top: 3px; }
+        .job-desc li { margin-bottom: 2px; padding-left: 12px; position: relative; }
         .job-desc li::before { content: "▹"; position: absolute; left: 0; color: var(--primary-color); }
+
+        .other-exp-grid { display: grid; grid-template-columns: 1fr; gap: 4px; font-size: 0.78rem; color: var(--text-light); }
+        .other-exp-item { display: flex; justify-content: space-between; border-left: 2px solid var(--primary-color); padding-left: 6px; }
 
         .lang-toggle {
             position: fixed; top: 20px; right: 20px; padding: 10px 15px;
@@ -119,24 +122,19 @@
             @page { margin: 0; size: letter; }
             .page { 
                 margin: 0; width: 8.5in; height: 11in; box-shadow: none;
-                display: grid !important; grid-template-columns: 32% 68% !important;
+                display: grid !important; grid-template-columns: 30% 70% !important;
             }
-            .sidebar { 
-                background-color: var(--primary-color) !important; 
-                height: 100%; 
-                padding: 20px 15px;
-            }
-            .main-content { 
-                padding: 20px 25px; 
-            }
-            .header-name h1 { font-size: 1.7rem; }
-            .header-name h2 { font-size: 0.95rem; margin-bottom: 8px; }
-            .profile-summary { margin-bottom: 12px; font-size: 0.78rem; }
-            h3.section-title-main { margin-top: 8px; margin-bottom: 8px; font-size: 0.95rem; }
-            h3.section-title-side { margin-top: 12px; margin-bottom: 6px; font-size: 0.8rem; }
-            .experience-item { margin-bottom: 10px; }
-            .job-desc { font-size: 0.78rem; }
-            .skills-list li { background: rgba(255,255,255,0.1) !important; padding: 4px 8px; margin-bottom: 4px; font-size: 0.78rem; }
+            .sidebar { background-color: var(--primary-color) !important; height: 100%; padding: 20px 12px; }
+            .main-content { padding: 20px 25px; }
+            .header-name h1 { font-size: 1.6rem; }
+            .header-name h2 { font-size: 0.95rem; margin-bottom: 6px; }
+            .profile-summary { margin-bottom: 10px; font-size: 0.75rem; }
+            h3.section-title-main { margin-top: 10px; margin-bottom: 6px; font-size: 0.9rem; }
+            h3.section-title-side { margin-top: 12px; margin-bottom: 4px; font-size: 0.75rem; }
+            .experience-item { margin-bottom: 8px; }
+            .job-desc { font-size: 0.75rem; }
+            .skills-list li { padding: 3px 6px; margin-bottom: 3px; font-size: 0.75rem; }
+            .other-exp-grid { gap: 2px; font-size: 0.75rem; }
         }
     </style>
 </head>
@@ -147,7 +145,7 @@
     <div class="page">
         <aside class="sidebar">
             <div class="logo-container">
-                <img src="logo.png" alt="Logo de Clément Maillot" onerror="this.parentNode.innerHTML='<h1 style=\'font-size:3em; color:white\'>M</h1>'">
+                <img src="logo.png" alt="Logo de Clément Maillot" onerror="this.parentNode.innerHTML='<h1 style=\'font-size:2.5em; color:white\'>M</h1>'">
             </div>
 
             <address class="contact-info">
@@ -162,21 +160,17 @@
             </h3>
             <ul class="skills-list">
                 <li>
-                    <strong class="fr-only">Gestion de projet :</strong><strong class="en-only">Project Management:</strong>
-                    <span class="fr-only">Planification, agilité, gestion des risques, suivi budgétaire</span>
-                    <span class="en-only">Planning, agile methodologies, risk management, budget tracking</span>
+                    <strong class="fr-only">Gestion & Opérations :</strong><strong class="en-only">Management & Ops:</strong>
+                    <span class="fr-only">Agilité, priorisation, indicateurs KPI, support N2/N3</span>
+                    <span class="en-only">Agile, prioritization, KPIs, Tier 2/3 support</span>
                 </li>
                 <li>
-                    <strong class="fr-only">Développement Web :</strong><strong class="en-only">Web Development:</strong>
-                    <span>React, Vue.js, HTML, CSS, PHP, Laravel</span>
+                    <strong class="fr-only">Langages Web :</strong><strong class="en-only">Web Development:</strong>
+                    <span>React.js, Vue.js, PHP Laravel, HTML/CSS</span>
                 </li>
                 <li>
-                    <strong class="fr-only">Outils et TI :</strong><strong class="en-only">Tools & IT:</strong>
-                    <span>JIRA, Confluence, Google Workspace, Git, SQL</span>
-                </li>
-                <li>
-                    <strong class="fr-only">Création visuelle :</strong><strong class="en-only">Visual Creation:</strong>
-                    <span>Photoshop, Illustrator, Premiere, After Effects</span>
+                    <strong class="fr-only">Outils & Données :</strong><strong class="en-only">Tools & Data:</strong>
+                    <span>SQL, JIRA, Confluence, Git, Redis, MAMP</span>
                 </li>
             </ul>
 
@@ -186,9 +180,8 @@
             </h3>
             <ul class="skills-list">
                 <li>• <span class="fr-only">Leadership d'équipe</span><span class="en-only">Team Leadership</span></li>
-                <li>• <span class="fr-only">Résolution de problèmes complexes</span><span class="en-only">Complex Problem Solving</span></li>
-                <li>• <span class="fr-only">Dynamique et déterminé</span><span class="en-only">Dynamic & Determined</span></li>
-                <li>• <span class="fr-only">Sens aigu du service client</span><span class="en-only">Customer-Centric Mindset</span></li>
+                <li>• <span class="fr-only">Résolution de problèmes</span><span class="en-only">Problem Solving</span></li>
+                <li>• <span class="fr-only">Relation client & Pédagogie</span><span class="en-only">Customer Relations & Coaching</span></li>
             </ul>
 
             <h3 class="section-title-side">
@@ -196,9 +189,8 @@
                 <span class="en-only">Languages</span>
             </h3>
             <ul class="skills-list">
-                <li><span class="fr-only">Français (Langue maternelle)</span><span class="en-only">French (Native)</span></li>
+                <li><span class="fr-only">Français (Maternelle)</span><span class="en-only">French (Native)</span></li>
                 <li><span class="fr-only">Anglais (Courant)</span><span class="en-only">English (Fluent)</span></li>
-                <li><span class="fr-only">Allemand (Intermédiaire)</span><span class="en-only">German (Intermediate)</span></li>
             </ul>
 
             <h3 class="section-title-side">
@@ -206,8 +198,8 @@
                 <span class="en-only">Interests</span>
             </h3>
             <ul class="skills-list">
-                <li><span class="fr-only">Rugby / Escalade</span><span class="en-only">Rugby / Rock Climbing</span></li>
-                <li><span class="fr-only">Jeux vidéo / Technologies</span><span class="en-only">Video Games / Tech</span></li>
+                <li><span class="fr-only">Escalade de bloc</span><span class="en-only">Rock Climbing</span></li>
+                <li><span class="fr-only">Jeux vidéo / Tech</span><span class="en-only">Video Games / Tech</span></li>
                 <li><span class="fr-only">Danse tahitienne</span><span class="en-only">Tahitian Dance</span></li>
             </ul>
         </aside>
@@ -216,114 +208,165 @@
             <header class="header-name">
                 <h1>Clément Maillot</h1>
                 <h2>
-                    <span class="fr-only">Chargé de projet TI et Conseiller aux opérations</span>
-                    <span class="en-only">IT Project Manager & Operations Consultant</span>
+                    <span class="fr-only">Chef d'équipe Opérations, Gestionnaire de Projets TI & Développeur</span>
+                    <span class="en-only">Operations Team Lead, IT Project Manager & Developer</span>
                 </h2>
-                <p class="profile-summary fr-only">Professionnel chevronné de l'informatique spécialisé dans la coordination d'équipes techniques et l'optimisation des processus opérationnels. Alliant une solide expertise en développement Web et en gestion d'incidents, je sais piloter des projets complexes, orchestrer les priorités et mobiliser les ressources pour dépasser les objectifs d'affaires.</p>
-                <p class="profile-summary en-only">Experienced IT professional specializing in technical team coordination and operational process optimization. Combining strong expertise in Web development and incident management, I successfully lead complex projects, orchestrate strategic priorities, and mobilize resources to exceed business goals.</p>
+                <p class="profile-summary fr-only">Professionnel polyvalent des TI combinant un leadership d'équipe éprouvé, une solide expertise en support opérationnel et des compétences concrètes en programmation et intégration Web (React, Vue, Laravel). Expert dans la résolution de problèmes complexes et l'optimisation de processus.</p>
+                <p class="profile-summary en-only">Versatile IT professional combining proven team leadership, strong operational support background, and hands-on software development skills (React, Vue, Laravel). Expert in solving complex problems and streamlining technical workflows.</p>
             </header>
 
             <h3 class="section-title-main">
-                <span class="fr-only">Expériences Professionnelles</span>
-                <span class="en-only">Professional Experience</span>
+                <span class="fr-only">Expériences TI Principales</span>
+                <span class="en-only">Key IT Experience</span>
             </h3>
 
             <div class="experience-item">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">
-                            <span class="fr-only">Chef d'équipe des opérations et des projets TI</span>
-                            <span class="en-only">Operations & IT Project Team Lead</span>
-                        </div>
+                        <div class="job-title"><span class="fr-only">Chef d'équipe - OPS</span><span class="en-only">Team Lead - OPS</span></div>
                         <div class="job-company">Solutions Médias 360, Montréal</div>
                     </div>
-                    <div class="job-date"><time>2024 – 2026</time></div>
+                    <div class="job-date"><time class="fr-only">juin 2025 – mars 2026</time><time class="en-only">Jun 2025 – Mar 2026</time></div>
                 </div>
                 <ul class="job-desc fr-only">
-                    <li>Supervision de l'équipe technique, gestion budgétaire des affectations et planification des calendriers de livraison.</li>
-                    <li>Prise en charge des escalades techniques complexes et coordination interfonctionnelle pour la résolution rapide d'incidents (Niveaux 2 et 3).</li>
-                    <li>Planification et animation des ateliers de formation continue pour le perfectionnement des conseillers techniques.</li>
-                    <li>Définition, suivi et optimisation des indicateurs de performance clés (KPI) et restructuration des processus de soutien opérationnel.</li>
+                    <li>Supervision de l'équipe technique, optimisation des flux opérationnels et intégration de l'IA pour accroître l'efficacité de l'équipe.</li>
+                    <li>Prise en charge des incidents complexes et escalades de niveaux 2 et 3.</li>
                 </ul>
                 <ul class="job-desc en-only">
-                    <li>Supervised the technical operations team, managed resource allocation budgets, and structured delivery schedules.</li>
-                    <li>Handled complex technical escalations and drove cross-functional collaboration to ensure rapid incident resolution (Tier 2 & 3).</li>
-                    <li>Planned, designed, and executed continuous training workshops to elevate technical team capabilities.</li>
-                    <li>Defined, monitored, and optimized operational Key Performance Indicators (KPIs) while restructuring core support processes.</li>
+                    <li>Supervised the technical team, optimized operational workflows, and leveraged AI integration to boost team efficiency.</li>
+                    <li>Managed advanced technical escalations and critical Tier 2 and Tier 3 system incidents.</li>
                 </ul>
             </div>
 
             <div class="experience-item">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">
-                            <span class="fr-only">Conseiller technique au soutien opérationnel</span>
-                            <span class="en-only">Technical Operations Support Consultant</span>
-                        </div>
-                        <div class="job-company">Solutions Médias 360, Montréal</div>
+                        <div class="job-title"><span class="fr-only">Technicien Support OPS</span><span class="en-only">Technical Operations Support</span></div>
+                        <div class="job-company">360.Agency / Solutions Médias 360, Montréal</div>
                     </div>
-                    <div class="job-date"><time>2022 – 2024</time></div>
+                    <div class="job-date"><time class="fr-only">janv. 2022 – juin 2025</time><time class="en-only">Jan 2022 – Jun 2025</time></div>
                 </div>
                 <ul class="job-desc fr-only">
-                    <li>Gestion des stocks technologiques et soutien de pointe aux utilisateurs d'infrastructures d'affaires.</li>
-                    <li>Déploiement, configuration et mise en production d'outils internes et de plateformes Web.</li>
-                    <li>Administration complète des serveurs de noms (DNS) et encadrement des transitions ou fermetures de comptes de services.</li>
-                    <li>Liaison stratégique et négociation auprès des fournisseurs tiers lors de pannes ou de demandes d'évolutions logicielles.</li>
+                    <li>Gestion des bases de données SQL, administration DNS complète et intégration technologique de plateformes Web.</li>
+                    <li>Support technique de pointe aux utilisateurs et liaisons avec les fournisseurs tiers lors d'incidents critiques.</li>
                 </ul>
                 <ul class="job-desc en-only">
-                    <li>Managed technological inventories and delivered advanced infrastructure support to business units.</li>
-                    <li>Deployed, configured, and initiated production launches for web platforms and critical internal utilities.</li>
-                    <li>Ensured full domain name system (DNS) administration and oversaw smooth service transitions or account terminations.</li>
-                    <li>Acted as a strategic liaison and negotiated with third-party vendors during system outages or feature request evaluations.</li>
+                    <li>Managed SQL databases, handled full DNS domain administration, and executed web platform deployments.</li>
+                    <li>Provided advanced user support and acted as primary liaison with third-party vendors during infrastructure incidents.</li>
                 </ul>
             </div>
 
             <div class="experience-item">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">
-                            <span class="fr-only">Développeur d'interfaces utilisateur</span>
-                            <span class="en-only">User Interface Developer</span>
-                        </div>
+                        <div class="job-title"><span class="fr-only">Développeur des interfaces utilisateurs</span><span class="en-only">React Developer</span></div>
                         <div class="job-company">JurisConcept, Québec</div>
                     </div>
-                    <div class="job-date"><time>2021 – 2022</time></div>
+                    <div class="job-date"><time class="fr-only">juin 2021 – janv. 2022</time><time class="en-only">Jun 2021 – Jan 2022</time></div>
                 </div>
                 <ul class="job-desc fr-only">
-                    <li>Analyse des besoins d'affaires et conception d'interfaces applicatives ergonomiques pour un progiciel de gestion.</li>
-                    <li>Intégration technique, programmation de modules réutilisables et assurance qualité sous l'architecture React.js.</li>
+                    <li>Programmation d'applications, soutien à l'intégration et développement de modules réutilisables en React.js pour un logiciel de gestion interne.</li>
                 </ul>
                 <ul class="job-desc en-only">
-                    <li>Analyzed business requirements and designed highly intuitive, user-centered application interfaces for proprietary enterprise software.</li>
-                    <li>Executed technical integration, developed modular reusable components, and maintained quality control using React.js.</li>
+                    <li>Front-End development, UI support, and seamless technical integration using React.js for proprietary enterprise software.</li>
                 </ul>
+            </div>
+
+            <h3 class="section-title-main">
+                <span class="fr-only">Stages en Technologie</span>
+                <span class="en-only">Tech Internships</span>
+            </h3>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title"><span class="fr-only">Stagiaire Développeur Web</span><span class="en-only">Web Developer Intern</span></div>
+                        <div class="job-company">Gilcode, Québec</div>
+                    </div>
+                    <div class="job-date"><time class="fr-only">févr. 2021 – mai 2021</time><time class="en-only">Feb 2021 – May 2021</time></div>
+                </div>
+                <ul class="job-desc fr-only">
+                    <li>Conception d'applications avec PHP Laravel, Vue.JS, Vue Router, VueX, Composer, Redis et l'environnement MAMP.</li>
+                    <li>Gestion de sites de commerce électronique (extensions WordPress) et contrôle de la qualité avec correction d'anomalies visuelles.</li>
+                </ul>
+                <ul class="job-desc en-only">
+                    <li>Built web applications leveraging PHP Laravel, Vue.JS, Vue Router, VueX, Composer, Redis, and MAMP environments.</li>
+                    <li>Maintained E-commerce platforms (WordPress plugins) and executed Quality Assurance (QA) to fix layout anomalies.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title"><span class="fr-only">Stagiaire Développeur Web</span><span class="en-only">Web Developer Intern</span></div>
+                        <div class="job-company">IaM (Immigration and Migration), Londres, RU</div>
+                    </div>
+                    <div class="job-date"><time class="fr-only">févr. 2018 – mars 2018</time><time class="en-only">Feb 2018 – Mar 2018</time></div>
+                </div>
+                <ul class="job-desc fr-only">
+                    <li>Création d'un site web à carte interactive dynamique exploitant des données d'APIs tierces (Twitter, Wikipédia).</li>
+                    <li>Utilisation approfondie des langages et technologies HTML, CSS, XML, XPath et PHP.</li>
+                </ul>
+                <ul class="job-desc en-only">
+                    <li>Created a dynamic web platform with an interactive map using third-party APIs (Twitter, Wikipedia).</li>
+                    <li>Leveraged HTML, CSS, XML, XPath, and PHP to parse and aggregate live data streams.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title"><span class="fr-only">Stagiaire Développeur Logiciel</span><span class="en-only">Software Developer Intern</span></div>
+                        <div class="job-company">Le Groupe La Poste, La Réunion</div>
+                    </div>
+                    <div class="job-date"><time class="fr-only">mai 2017 – juin 2017</time><time class="en-only">May 2017 – Jun 2017</time></div>
+                </div>
+                <ul class="job-desc fr-only">
+                    <li>Développement d'une application interne de tri et d'export de flux de données vers Excel via WinDev (WLanguage).</li>
+                    <li>Rédaction complète de la documentation technique et du guide d'utilisation destiné aux utilisateurs métiers.</li>
+                </ul>
+                <ul class="job-desc en-only">
+                    <li>Developed an internal data processing application to sort and export records to Excel using WinDev (WLanguage).</li>
+                    <li>Authored comprehensive software documentation and a user-friendly manual for core business units.</li>
+                </ul>
+            </div>
+
+            <h3 class="section-title-main">
+                <span class="fr-only">Autres Expériences (Service & Pédagogie)</span>
+                <span class="en-only">Other Experience (Service & Coaching)</span>
+            </h3>
+            <div class="other-exp-grid">
+                <div class="other-exp-item">
+                    <strong><span class="fr-only">Étudiant Tuteur en Programmation</span><span class="en-only">Computer Science Student Tutor</span> – Cégep de Matane</strong>
+                    <span class="job-date">2018 – 2021</span>
+                </div>
+                <div class="other-exp-item">
+                    <strong><span class="fr-only">Moniteur d'Escalade</span><span class="en-only">Rock Climbing Instructor</span> – CAP Cégep de Matane</strong>
+                    <span class="job-date">2019 – 2021</span>
+                </div>
+                <div class="other-exp-item">
+                    <strong><span class="fr-only">Conseiller aux Ventes</span><span class="en-only">Sales Consultant</span> – <span class="fr-only">La Source / Iristel</span><span class="en-only">The Source / Iristel</span></strong>
+                    <span class="job-date">2019 – 2021</span>
+                </div>
             </div>
 
             <h3 class="section-title-main">
                 <span class="fr-only">Formation</span>
                 <span class="en-only">Education</span>
             </h3>
-
             <div class="experience-item">
                 <div class="job-header">
-                    <div class="job-title">
-                        <span class="fr-only">Diplôme d'études collégiales (DEC) en Techniques d'intégration multimédia</span>
-                        <span class="en-only">Diploma of College Studies (DCS) in Multimedia Integration Techniques</span>
-                    </div>
-                    <div class="job-date"><time>2018 – 2021</time></div>
+                    <div class="job-title"><span class="fr-only">DEC en Techniques d'intégration multimédia</span><span class="en-only">DCS in Multimedia Integration Techniques</span></div>
+                    <div class="job-date">2018 – 2021</div>
                 </div>
                 <div class="job-company">Cégep de Matane, Québec</div>
             </div>
-
             <div class="experience-item">
                 <div class="job-header">
-                    <div class="job-title">
-                        <span class="fr-only">Brevet de technicien supérieur (BTS) en Services informatiques aux organisations</span>
-                        <span class="en-only">Higher National Diploma (HND) in IT Services for Organizations</span>
-                    </div>
-                    <div class="job-date"><time>2016 – 2018</time></div>
+                    <div class="job-title"><span class="fr-only">BTS en Services informatiques aux organisations (SIO)</span><span class="en-only">HND in IT Services for Organizations</span></div>
+                    <div class="job-date">2016 – 2018</div>
                 </div>
-                <div class="job-company"><span class="fr-only">Lycée Bellepierre, La Réunion</span><span class="en-only">Lycée Bellepierre, Reunion Island</span></div>
+                <div class="job-company">Lycée Bellepierre, La Réunion</div>
             </div>
         </main>
     </div>
