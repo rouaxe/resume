@@ -6,9 +6,11 @@
     <title>CV - Clément Maillot</title>
     <meta name="description" content="CV en ligne de Clément Maillot, Chef d'équipe Opérations, Gestionnaire de Projets TI et Développeur Web. Découvrez mon parcours et mes compétences techniques.">
     <link rel="icon" type="image/png" href="logo.png">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+    
     <style>
         :root {
             --primary-color: #2E1A47;
@@ -124,6 +126,24 @@
         html[lang="en"] .en-only { display: block !important; }
         html[lang="en"] span.en-only, html[lang="en"] strong.en-only, html[lang="en"] time.en-only { display: inline !important; }
 
+        @media (max-width: 768px) {
+            body { background: var(--bg-paper); }
+            .page {
+                width: 100%;
+                max-width: 100%;
+                min-height: auto;
+                margin: 0;
+                grid-template-columns: 1fr;
+                box-shadow: none;
+            }
+            .sidebar { padding: 30px 20px; }
+            .main-content { padding: 30px 20px; }
+            .lang-toggle { top: 10px; right: 10px; padding: 8px 12px; font-size: 0.9rem; }
+            .job-header { flex-direction: column; align-items: flex-start; gap: 2px; }
+            .job-date { text-align: left; margin-top: 2px; }
+            .other-exp-item { flex-direction: column; align-items: flex-start; gap: 2px; margin-bottom: 8px; }
+        }
+
         @media print {
             body { background: white; }
             .lang-toggle { display: none !important; }
@@ -153,7 +173,7 @@
     <div class="page">
         <aside class="sidebar">
             <div class="logo-container">
-                <img src="logo.webp" width="126" height="130" alt="Logo de Clément Maillot" onerror="this.onerror=null; this.src='logo.png'; this.removeAttribute('onerror');">
+                <img src="logo.png" width="126" height="130" alt="Logo de Clément Maillot">
             </div>
 
             <address class="contact-info">
@@ -234,7 +254,7 @@
                         <div class="job-title"><span class="fr-only">Chef d'équipe - OPS</span><span class="en-only">Team Lead - OPS</span></div>
                         <div class="job-company">Solutions Médias 360, Montréal</div>
                     </div>
-                    <div class="job-date"><time datetime="2025/2026">2025 – 2026</time></div>
+                    <div class="job-date"><time datetime="2025">2025 – 2026</time></div>
                 </div>
                 <ul class="job-desc fr-only">
                     <li>Supervision de l'équipe technique, optimisation des flux opérationnels et intégration de l'IA pour accroître l'efficacité de l'équipe.</li>
@@ -250,9 +270,9 @@
                 <div class="job-header">
                     <div>
                         <div class="job-title"><span class="fr-only">Technicien Support OPS</span><span class="en-only">Technical Operations Support</span></div>
-                        <div class="job-company">360.Agency / Solutions Médias 360, Montréal</div>
+                        <div class="job-company">Solutions Médias 360, Montréal</div>
                     </div>
-                    <div class="job-date"><time datetime="2022/2025">2022 – 2025</time></div>
+                    <div class="job-date"><time datetime="2022">2022 – 2025</time></div>
                 </div>
                 <ul class="job-desc fr-only">
                     <li>Gestion des bases de données SQL, administration DNS complète et intégration technologique de plateformes Web.</li>
@@ -270,7 +290,7 @@
                         <div class="job-title"><span class="fr-only">Développeur des interfaces utilisateurs</span><span class="en-only">React Developer</span></div>
                         <div class="job-company">JurisConcept, Québec</div>
                     </div>
-                    <div class="job-date"><time datetime="2021/2022">2021 – 2022</time></div>
+                    <div class="job-date"><time datetime="2021">2021 – 2022</time></div>
                 </div>
                 <ul class="job-desc fr-only">
                     <li>Programmation d'applications, soutien à l'intégration et développement de modules réutilisables en React.js pour un logiciel de gestion interne.</li>
@@ -346,15 +366,15 @@
             <div class="other-exp-grid">
                 <div class="other-exp-item">
                     <strong><span class="fr-only">Étudiant Tuteur en Programmation</span><span class="en-only">Computer Science Student Tutor</span> – Cégep de Matane</strong>
-                    <span class="job-date"><time datetime="2018/2021">2018 – 2021</time></span>
+                    <span class="job-date"><time datetime="2018">2018 – 2021</time></span>
                 </div>
                 <div class="other-exp-item">
                     <strong><span class="fr-only">Moniteur d'Escalade</span><span class="en-only">Rock Climbing Instructor</span> – CAP Cégep de Matane</strong>
-                    <span class="job-date"><time datetime="2019/2021">2019 – 2021</time></span>
+                    <span class="job-date"><time datetime="2019">2019 – 2021</time></span>
                 </div>
                 <div class="other-exp-item">
                     <strong><span class="fr-only">Conseiller aux Ventes</span><span class="en-only">Sales Consultant</span> – <span class="fr-only">La Source / Iristel</span><span class="en-only">The Source / Iristel</span></strong>
-                    <span class="job-date"><time datetime="2019/2021">2019 – 2021</time></span>
+                    <span class="job-date"><time datetime="2019">2019 – 2021</time></span>
                 </div>
             </div>
 
@@ -365,14 +385,14 @@
             <div class="experience-item">
                 <div class="job-header">
                     <div class="job-title"><span class="fr-only">DEC en Techniques d'intégration multimédia</span><span class="en-only">DCS in Multimedia Integration Techniques</span></div>
-                    <div class="job-date"><time datetime="2018/2021">2018 – 2021</time></div>
+                    <div class="job-date"><time datetime="2018">2018 – 2021</time></div>
                 </div>
                 <div class="job-company">Cégep de Matane, Québec</div>
             </div>
             <div class="experience-item">
                 <div class="job-header">
                     <div class="job-title"><span class="fr-only">BTS en Services informatiques aux organisations (SIO)</span><span class="en-only">HND in IT Services for Organizations</span></div>
-                    <div class="job-date"><time datetime="2016/2018">2016 – 2018</time></div>
+                    <div class="job-date"><time datetime="2016">2016 – 2018</time></div>
                 </div>
                 <div class="job-company">Lycée Bellepierre, La Réunion</div>
             </div>
