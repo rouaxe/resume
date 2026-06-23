@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Clément Maillot</title>
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -98,33 +99,33 @@
         .job-desc li { margin-bottom: 3px; padding-left: 15px; position: relative; }
         .job-desc li::before { content: "▹"; position: absolute; left: 0; color: var(--primary-color); }
 
-        .en-only { display: none !important; }
-        [lang="en"] .fr-only { display: none !important; }
-        [lang="en"] .en-only { display: block !important; }
-        [lang="en"] span.en-only, [lang="en"] strong.en-only { display: inline !important; }
-
-        .lang-toggle {
-            position: fixed; top: 20px; right: 20px; padding: 10px 15px;
-            background: var(--primary-color); color: white; border: 2px solid var(--accent-main);
-            border-radius: 5px; cursor: pointer; z-index: 1000; font-weight: bold;
-        }
-
         @media print {
             body { background: white; }
-            .lang-toggle { display: none; }
             @page { margin: 0; size: A4; }
             .page { 
                 margin: 0; width: 21cm; height: 29.7cm; box-shadow: none;
                 display: grid !important; grid-template-columns: 32% 68% !important;
             }
-            .sidebar { background-color: var(--primary-color) !important; height: 100%; }
-            .skills-list li { background: rgba(255,255,255,0.1) !important; }
+            .sidebar { 
+                background-color: var(--primary-color) !important; 
+                height: 100%; 
+                padding: 20px 15px;
+            }
+            .main-content { 
+                padding: 20px 25px; 
+            }
+            .header-name h1 { font-size: 1.8rem; }
+            .header-name h2 { font-size: 1rem; margin-bottom: 10px; }
+            .profile-summary { margin-bottom: 15px; font-size: 0.8rem; }
+            h3.section-title-main { margin-top: 10px; margin-bottom: 10px; font-size: 1rem; }
+            h3.section-title-side { margin-top: 15px; margin-bottom: 8px; font-size: 0.85rem; }
+            .experience-item { margin-bottom: 12px; }
+            .job-desc { font-size: 0.8rem; }
+            .skills-list li { background: rgba(255,255,255,0.1) !important; padding: 4px 8px; margin-bottom: 5px; font-size: 0.8rem; }
         }
     </style>
 </head>
-<body lang="fr">
-
-    <button class="lang-toggle" onclick="toggleLang()">FR / EN</button>
+<body>
 
     <div class="page">
         <aside class="sidebar">
@@ -138,139 +139,111 @@
                 <div class="contact-item">✉️ <span class="contact-text">clement.maillot.qc@gmail.com</span></div>
             </div>
 
-            <h3 class="section-title-side"><span class="fr-only">Compétences</span><span class="en-only">Skills</span></h3>
+            <h3 class="section-title-side">Compétences</h3>
             <ul class="skills-list">
-                <li><strong>Web Front:</strong> React, Vue.js, HTML, CSS</li>
-                <li><strong>Back-End:</strong> PHP, Laravel, Java, C#, SQL</li>
-                <li><strong><span class="fr-only">Outils:</span><span class="en-only">Tools:</span></strong> JIRA, Confluence, Google Workspace, Git</li>
-                <li><strong><span class="fr-only">Créatif:</span><span class="en-only">Creative:</span></strong> Ps, Ai, Pr, Ae</li>
+                <li><strong>Gestion de projet:</strong> Planification, agilité, gestion des risques, suivi budgétaire</li>
+                <li><strong>Développement Web:</strong> React, Vue.js, HTML, CSS, PHP, Laravel</li>
+                <li><strong>Outils & TI:</strong> JIRA, Confluence, Espace de travail Google, Git, SQL</li>
+                <li><strong>Création visuelle:</strong> Photoshop, Illustrator, Premiere, After Effects</li>
             </ul>
 
-            <h3 class="section-title-side"><span class="fr-only">Qualités</span><span class="en-only">Soft Skills</span></h3>
+            <h3 class="section-title-side">Aptitudes</h3>
             <ul class="skills-list">
-                <li>• Leadership</li>
-                <li>• <span class="fr-only">Résolution de problèmes</span><span class="en-only">Problem Solving</span></li>
-                <li>• <span class="fr-only">Dynamique & Déterminé</span><span class="en-only">Dynamic & Determined</span></li>
-                <li>• <span class="fr-only">Sens du service</span><span class="en-only">Customer Oriented</span></li>
+                <li>• Leadership d'équipe</li>
+                <li>• Résolution de problèmes complexes</li>
+                <li>• Dynamique & Déterminé</li>
+                <li>• Sens aigu du service client</li>
             </ul>
 
-            <h3 class="section-title-side"><span class="fr-only">Langues</span><span class="en-only">Languages</span></h3>
+            <h3 class="section-title-side">Langues</h3>
             <ul class="skills-list">
-                <li><span class="fr-only">Français (Natif)</span><span class="en-only">French (Native)</span></li>
-                <li><span class="fr-only">Anglais (Courant)</span><span class="en-only">English (Fluent)</span></li>
-                <li><span class="fr-only">Allemand (Intermédiaire)</span><span class="en-only">German (Intermediate)</span></li>
+                <li>Français (Langue maternelle)</li>
+                <li>Anglais (Courant)</li>
+                <li>Allemand (Intermédiaire)</li>
             </ul>
 
-            <h3 class="section-title-side"><span class="fr-only">Intérêts</span><span class="en-only">Interests</span></h3>
+            <h3 class="section-title-side">Intérêts</h3>
             <ul class="skills-list">
-                <li><span class="fr-only">Rugby / Escalade</span><span class="en-only">Rugby / Climbing</span></li>
-                <li><span class="fr-only">Jeux Vidéo / Tech</span><span class="en-only">Video Games / Tech</span></li>
-                <li><span class="fr-only">Danse tahitienne</span><span class="en-only">Tahitian Dance</span></li>
+                <li>Rugby / Escalade</li>
+                <li>Jeux vidéo / Technologies</li>
+                <li>Danse tahitienne</li>
             </ul>
         </aside>
 
         <main class="main-content">
             <header class="header-name">
                 <h1>Clément Maillot</h1>
-                <h2>
-                    <span class="fr-only">Team Lead OPS & Développeur</span>
-                    <span class="en-only">Team Lead OPS & Developer</span>
-                </h2>
-                <p class="profile-summary fr-only">Professionnel passionné par la technologie et la gestion opérationnelle. Fort d'une double compétence en développement web et en support technique, je me spécialise aujourd'hui dans la coordination d'équipes et l'optimisation des processus.</p>
-                <p class="profile-summary en-only">Passionate professional with expertise in technology and operational management. With a dual background in web development and technical support, I now specialize in team coordination and process optimization.</p>
+                <h2>Chargé de projet TI & Conseiller aux opérations</h2>
+                <p class="profile-summary">Professionnel chevronné de l'informatique spécialisé dans la coordination d'équipes techniques et l'optimisation des processus opérationnels. Alliant une solide expertise en développement Web et en gestion d'incidents, je sais piloter des projets complexes, orchestrer les priorités et mobiliser les ressources pour dépasser les objectifs d'affaires.</p>
             </header>
 
-            <h3 class="section-title-main"><span class="fr-only">Expériences Professionnelles</span><span class="en-only">Professional Experience</span></h3>
+            <h3 class="section-title-main">Expériences Professionnelles</h3>
 
             <div class="experience-item">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">Team Lead OPS</div>
+                        <div class="job-title">Chef d'équipe des opérations et des projets TI</div>
                         <div class="job-company">Solutions Médias 360, Montréal</div>
                     </div>
-                    <div class="job-date"><span class="fr-only">Déc 2024 – Mars 2026</span><span class="en-only">Dec 2024 – March 2026</span></div>
+                    <div class="job-date">2024 – 2026</div>
                 </div>
-                <ul class="job-desc fr-only">
-                    <li><i>(Remplacement de déc. 2024 à avril 2025, titularisé depuis mai 2025)</i></li>
-                    <li>Supervision de l'équipe des opérations, gestion des plannings et priorités.</li>
-                    <li>Point de contact principal pour les escalades techniques (Niveau 2/3).</li>
-                    <li>Formation continue et coaching des nouveaux techniciens.</li>
-                    <li>Optimisation des KPIs et des processus de support.</li>
-                </ul>
-                <ul class="job-desc en-only">
-                    <li><i>(Acting role from Dec 2024 to April 2025, Full-time since May 2025)</i></li>
-                    <li>Supervision of the operations team, management of schedules and priorities.</li>
-                    <li>Main point of contact for technical escalations (Tier 2/3).</li>
-                    <li>Continuous training and coaching of new technicians.</li>
-                    <li>Optimization of KPIs and support processes.</li>
+                <ul class="job-desc">
+                    <li>Supervision de l'équipe technique, gestion budgétaire des affectations et planification des calendriers de livraison.</li>
+                    <li>Prise en charge des escalades techniques complexes et coordination interfonctionnelle pour la résolution rapide d'incidents (Niveaux 2 et 3).</li>
+                    <li>Planification et animation des ateliers de formation continue pour le perfectionnement des conseillers techniques.</li>
+                    <li>Définition, suivi et optimisation des indicateurs de performance clés (KPI) et restructuration des processus de soutien opérationnel.</li>
                 </ul>
             </div>
 
             <div class="experience-item">
                 <div class="job-header">
                     <div>
-                        <div class="job-title"><span class="fr-only">Technicien Support Ops</span><span class="en-only">Ops Support Technician</span></div>
+                        <div class="job-title">Conseiller technique au soutien opérationnel</div>
                         <div class="job-company">Solutions Médias 360, Montréal</div>
                     </div>
-                    <div class="job-date"><span class="fr-only">Fév 2022 – Déc 2024</span><span class="en-only">Feb 2022 – Dec 2024</span></div>
+                    <div class="job-date">2022 – 2024</div>
                 </div>
-                <ul class="job-desc fr-only">
-                    <li>Support technique et gestion d'inventaire.</li>
-                    <li>Installation et configuration de services (sites web, outils internes).</li>
-                    <li>Gestion des DNS et des résiliations de services.</li>
-                    <li>Communication avec les fournisseurs tiers pour la résolution d'incidents.</li>
-                </ul>
-                <ul class="job-desc en-only">
-                    <li>Technical support and inventory management.</li>
-                    <li>Installation and configuration of services (websites, internal tools).</li>
-                    <li>DNS management and service terminations.</li>
-                    <li>Communication with third-party providers for incident resolution.</li>
+                <ul class="job-desc">
+                    <li>Gestion des stocks technologiques et soutien de pointe aux utilisateurs d'infrastructures d'affaires.</li>
+                    <li>Déploiement, configuration et mise en production d'outils internes et de plateformes Web.</li>
+                    <li>Administration complète des serveurs de noms (DNS) et encadrement des transitions ou fermetures de comptes de services.</li>
+                    <li>Liaison stratégique et négociation auprès des fournisseurs tiers lors de pannes ou de demandes d'évolutions logicielles.</li>
                 </ul>
             </div>
 
             <div class="experience-item">
                 <div class="job-header">
                     <div>
-                        <div class="job-title"><span class="fr-only">Développeur Front-End</span><span class="en-only">Front-End Developer</span></div>
-                        <div class="job-company"><span class="fr-only">JurisConcept, Québec</span><span class="en-only">JurisConcept, Quebec</span></div>
+                        <div class="job-title">Développeur d'interfaces utilisateur</div>
+                        <div class="job-company">JurisConcept, Québec</div>
                     </div>
-                    <div class="job-date"><span class="fr-only">Juil 2021 – Fév 2022</span><span class="en-only">Jul 2021 – Feb 2022</span></div>
+                    <div class="job-date">2021 – 2022</div>
                 </div>
-                <ul class="job-desc fr-only">
-                    <li>Développement d'interfaces utilisateur (UI) pour logiciel interne.</li>
-                    <li>Intégration et maintenance en React.js.</li>
-                </ul>
-                <ul class="job-desc en-only">
-                    <li>Development of User Interfaces (UI) for internal software.</li>
-                    <li>Integration and maintenance using React.js.</li>
+                <ul class="job-desc">
+                    <li>Analyse des besoins d'affaires et conception d'interfaces applicatives ergonomiques pour un progiciel de gestion.</li>
+                    <li>Intégration technique, programmation de modules réutilisables et assurance qualité sous l'architecture React.js.</li>
                 </ul>
             </div>
 
-            <h3 class="section-title-main"><span class="fr-only">Formation</span><span class="en-only">Education</span></h3>
+            <h3 class="section-title-main">Formation</h3>
 
             <div class="experience-item">
                 <div class="job-header">
-                    <div class="job-title"><span class="fr-only">DEC Technique d'intégration multimédia</span><span class="en-only">DCS Multimedia Integration Technique</span></div>
+                    <div class="job-title">Diplôme d'études collégiales (DEC) en Techniques d'intégration multimédia</div>
                     <div class="job-date">2018 – 2021</div>
                 </div>
-                <div class="job-company"><span class="fr-only">Cégep de Matane, Québec</span><span class="en-only">Cégep de Matane, Quebec</span></div>
+                <div class="job-company">Cégep de Matane, Québec</div>
             </div>
 
             <div class="experience-item">
                 <div class="job-header">
-                    <div class="job-title"><span class="fr-only">BTS Services informatiques (SIO)</span><span class="en-only">HND in Computer Services (BTS SIO)</span></div>
+                    <div class="job-title">Brevet de technicien supérieur (BTS) en Services informatiques aux organisations</div>
                     <div class="job-date">2016 – 2018</div>
                 </div>
-                <div class="job-company"><span class="fr-only">Lycée Bellepierre, Réunion</span><span class="en-only">Lycée Bellepierre, Reunion Island</span></div>
+                <div class="job-company">Lycée Bellepierre, La Réunion</div>
             </div>
         </main>
     </div>
 
-    <script>
-        function toggleLang() {
-            const html = document.documentElement;
-            html.setAttribute('lang', html.getAttribute('lang') === 'fr' ? 'en' : 'fr');
-        }
-    </script>
 </body>
 </html>
